@@ -41,6 +41,18 @@ module VagrantPlugins
         Vagrant::MachineState.new(state_id, short, long)
       end
 
+      def region
+        # Return the region associated with the instance if the machine
+        # has already been launched, or return the default region configured.
+        machine_region_file = @machine.data_dir.join("region")
+
+        if File.exists?(machine_region_file)
+          return File.read(machine_region_file)
+        else
+          return @machine.provider_config.region
+        end
+      end
+
       def to_s
         id = @machine.id.nil? ? "new" : @machine.id
         "AWS (#{id})"

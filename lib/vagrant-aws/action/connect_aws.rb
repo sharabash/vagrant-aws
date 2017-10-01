@@ -15,7 +15,7 @@ module VagrantPlugins
 
         def call(env)
           # Get the region we're going to booting up in
-          region = env[:machine].provider_config.region
+          region = env[:machine].provider.region
 
           # Get the configs
           region_config = env[:machine].provider_config.get_region_config(region)
