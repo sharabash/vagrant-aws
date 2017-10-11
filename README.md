@@ -1,13 +1,14 @@
 # Vagrant AWS Provider
 
-[![Build Status](https://travis-ci.org/mkubenka/vagrant-aws.svg?branch=mkubenka)](https://travis-ci.org/mkubenka/vagrant-aws)
-[![Gem Version](https://badge.fury.io/rb/vagrant-aws-mkubenka.svg)](https://badge.fury.io/rb/vagrant-aws-mkubenka)
-
 This is a [Vagrant](http://www.vagrantup.com) 1.2+ plugin that adds an [AWS](http://aws.amazon.com)
 provider to Vagrant, allowing Vagrant to control and provision machines in
 EC2 and VPC.
 
 **NOTE:** This plugin requires Vagrant 1.2+,
+
+## Credits
+
+This package was forked from vagrant-aws-mkubenka, https://github.com/mkubenka/vagrant-aws.
 
 ## Features
 
@@ -27,7 +28,7 @@ installing, `vagrant up` and specify the `aws` provider. An example is
 shown below.
 
 ```
-$ vagrant plugin install vagrant-aws-mkubenka
+$ vagrant plugin install vagrant-aws-cloudzilla
 ...
 $ vagrant up --provider=aws
 ...
